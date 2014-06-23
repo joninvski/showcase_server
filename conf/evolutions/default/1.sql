@@ -6,6 +6,7 @@
 create table bar (
   id                        varchar(255) not null,
   name                      varchar(255),
+  path                      varchar(255),
   constraint pk_bar primary key (id))
 ;
 
