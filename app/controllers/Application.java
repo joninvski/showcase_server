@@ -4,8 +4,7 @@ import play.*;
 import play.mvc.*;
 
 import views.html.*;
-import models.*;
-import models.Bar;
+import models.Ringtone;
 import play.data.Form;
 import java.util.List;
 import play.libs.Json;
@@ -17,14 +16,14 @@ public class Application extends Controller {
         return ok(index.render("Teste."));
     }
 
-    public static Result addBar() {
-        Bar bar =  Form.form(Bar.class).bindFromRequest().get();
-        bar.save();
+    public static Result addRingtone() {
+        Ringtone ring =  Form.form(Ringtone.class).bindFromRequest().get();
+        ring.save();
         return redirect(routes.Application.index());
     }
 
-    public static Result getBars() {
-        List<Bar> bars = new Model.Finder(String.class, Bar.class).all();
-        return ok(Json.toJson(bars));
+    public static Result getRingtones() {
+        List<Ringtone> rings = new Model.Finder(String.class, Ringtone.class).all();
+        return ok(Json.toJson(rings));
     }
 }

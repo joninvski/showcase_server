@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Bar extends Model {
+public class Ringtone extends Model {
 
     @Id
     public String id;

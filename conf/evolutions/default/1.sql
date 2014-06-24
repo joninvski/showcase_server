@@ -3,14 +3,14 @@
 
 # --- !Ups
 
-create table bar (
+create table ringtone (
   id                        varchar(255) not null,
   name                      varchar(255),
   path                      varchar(255),
-  constraint pk_bar primary key (id))
+  constraint pk_ringtone primary key (id))
 ;
 
-create sequence bar_seq;
+create sequence ringtone_seq;
 
 
 
@@ -19,9 +19,9 @@ create sequence bar_seq;
 
 SET REFERENTIAL_INTEGRITY FALSE;
 
-drop table if exists bar;
+drop table if exists ringtone;
 
 SET REFERENTIAL_INTEGRITY TRUE;
 
-drop sequence if exists bar_seq;
+drop sequence if exists ringtone_seq;
 
