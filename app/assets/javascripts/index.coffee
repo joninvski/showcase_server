@@ -1,4 +1,5 @@
 $ ->
  $.get "/bars", (data) ->
     $.each data, (index, ringtone) ->
-        $("#ringtones").append $("<li>").text ringtone.name
+        ringText = ringtone.name + " ---> " + ringtone.path
+        $("#ringtones").append $("<li>").text ringText

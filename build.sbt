@@ -1,11 +1,16 @@
-name := "foobar"
+name := """manel"""
 
 version := "1.0-SNAPSHOT"
+
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
+
+scalaVersion := "2.11.1"
 
 libraryDependencies ++= Seq(
   javaJdbc,
   javaEbean,
-  cache
-)     
-
-play.Project.playJavaSettings
+  cache,
+  "org.webjars" %% "webjars-play" % "2.3.0",
+  "org.webjars" % "bootstrap" % "3.1.1-2",
+  javaWs
+)
