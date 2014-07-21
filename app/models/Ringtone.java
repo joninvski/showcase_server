@@ -11,5 +11,5 @@ public class Ringtone extends Model {
     public String id;
     public String name;
     public String uri;
-    public int Price;
+    public Integer price;
 }
