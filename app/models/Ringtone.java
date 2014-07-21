@@ -10,6 +10,5 @@ public class Ringtone extends Model {
     @Id
     public String id;
     public String name;
-    public String path;
-
+    public String uri;
 }

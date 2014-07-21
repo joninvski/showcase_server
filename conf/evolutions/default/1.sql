@@ -12,7 +12,7 @@ create table event (
 create table ringtone (
   id                        varchar(255) not null,
   name                      varchar(255),
-  path                      varchar(255),
+  uri                       varchar(255),
   constraint pk_ringtone primary key (id))
 ;
 
