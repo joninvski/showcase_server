@@ -56,10 +56,11 @@
                 <script src='@routes.Assets.at("javascripts/index.js")'></script>
 
                 <ul id="ringtones"> </ul>
-
+                <p> Name Uri Price </p>
                 <form action="@routes.Application.addRingtone()" method="post">
                     <input name="name">
                     <input name="uri">
+                    <input name="price">
                     <input type="submit">
                 </form>
             </div>
