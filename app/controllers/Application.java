@@ -41,7 +41,7 @@ public class Application extends Controller {
             addRingtonePrivate("Coca-Cola", "http://fandbnews.com/wp-content/uploads/2014/02/Coca-Cola-Logo.jpg", 231);
             addRingtonePrivate("Clube Joanense", "http://gallery.jhwebdesigner.com/wp-content/uploads/2012/08/mount_sinai_soccer_club_logo_300dpi_png_file.jpg", 93);
             addRingtonePrivate("Zara", "http://img4.wikia.nocookie.net/__cb20121226055648/logopedia/images/5/53/Zara-LOGO-blackwhite.jpg", 81);
-            addRingtonePrivate("BCP", "https://gmkfreelogos.com/logos/M/img/Millennium_bcp-1.gif", 88);
+            addRingtonePrivate("BCP", "http://4vector.com/thumb_data/afd-33897.jpg", 88);
             addRingtonePrivate("CGD", "http://images.all-free-download.com/images/graphiclarge/cgd_2_62577.jpg", 19);
             rings = new Model.Finder(String.class, Ringtone.class).all();
         }
