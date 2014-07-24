@@ -12,6 +12,5 @@ libraryDependencies ++= Seq(
   cache,
   "org.webjars" %% "webjars-play" % "2.3.0",
   "org.webjars" % "bootstrap" % "3.1.1-2",
-  "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
   javaWs
 )
