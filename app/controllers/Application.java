@@ -53,17 +53,30 @@ public class Application extends Controller {
         return ok(Json.toJson(events));
     }
 
+    public static class ResponseCode {
+
+        public ResponseCode(int code, String desc) {
+            this.code = code;
+            this.desc = desc;
+        }
+
+        int code;
+        String desc;
+    }
+
 
     @BodyParser.Of(BodyParser.Json.class)
     public static Result insertEvent() {
         JsonNode json = request().body().asJson();
         Event e = Json.fromJson(json, Event.class);
         e.save();
-        String name = json.findPath("type").textValue();
-        if(name == null) {
-            return badRequest("Missing parameter [name]");
+        Integer duration = json.findPath("duration").intValue();
+        Boolean answered = json.findPath("duration").booleanValue();
+
+        if(duration == null || answered == null) {
+            return badRequest(Json.toJson(new ResponseCode(400, "Missing parameter [name or answered]")));
         } else {
-            return ok("Hello " + e);
+            return ok(Json.toJson(new ResponseCode(200, "Ok")));
         }
     }
 }

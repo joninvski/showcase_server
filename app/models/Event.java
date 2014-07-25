@@ -11,5 +11,6 @@ public class Event extends Model {
     @Id
     public String id;
 
-    public String type;
+    public int duration;
+    public String answered;
 }

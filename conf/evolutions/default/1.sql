@@ -5,7 +5,8 @@
 
 create table event (
   id                        varchar(255) not null,
-  type                      varchar(255),
+  duration                  integer,
+  answered                  varchar(255),
   constraint pk_event primary key (id))
 ;
 
