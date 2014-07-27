@@ -14,4 +14,5 @@ public class Event extends Model {
     public int duration;
     public boolean answered;
     public int volume;
+    public long date;
 }
