@@ -12,5 +12,6 @@ public class Event extends Model {
     public String id;
 
     public int duration;
-    public String answered;
+    public boolean answered;
+    public int volume;
 }
