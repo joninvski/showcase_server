@@ -12,5 +12,6 @@ libraryDependencies ++= Seq(
   cache,
   "org.webjars" %% "webjars-play" % "2.3.0",
   "org.webjars" % "bootstrap" % "3.1.1-2",
+  "mysql" % "mysql-connector-java" % "5.1.28",
   javaWs
 )
