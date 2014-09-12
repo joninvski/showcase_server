@@ -4,12 +4,18 @@ package models;
 import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
+
 
 @Entity
 public class Event extends Model {
 
     @Id
-    public String id;
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public long id;
 
     public int duration;
     public boolean answered;

@@ -4,38 +4,32 @@
 # --- !Ups
 
 create table event (
-  id                        varchar(255) not null,
+  ID                        bigint auto_increment not null,
   duration                  integer,
-  answered                  varchar(255),
-  constraint pk_event primary key (id))
+  answered                  tinyint(1) default 0,
+  volume                    integer,
+  date                      bigint,
+  constraint pk_event primary key (ID))
 ;
 
 create table ringtone (
-  id                        varchar(255) not null,
+  ID                        bigint auto_increment not null,
   name                      varchar(255),
   uri                       varchar(255),
   price                     integer,
-  constraint pk_ringtone primary key (id))
+  constraint pk_ringtone primary key (ID))
 ;
-
-create sequence event_seq;
-
-create sequence ringtone_seq;
 
 
 
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+SET FOREIGN_KEY_CHECKS=0;
 
-drop table if exists event;
+drop table event;
 
-drop table if exists ringtone;
+drop table ringtone;
 
-SET REFERENTIAL_INTEGRITY TRUE;
-
-drop sequence if exists event_seq;
-
-drop sequence if exists ringtone_seq;
+SET FOREIGN_KEY_CHECKS=1;
 
