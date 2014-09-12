@@ -26,11 +26,11 @@ public class Application extends Controller {
         return redirect(routes.Application.index());
     }
 
-    public static void addThing(String name, String uri, int price) {
+    public static void addThing(String name, String uri, String category) {
         Thing thing =   new Thing();
         thing.setName(name);
         thing.setUri(uri);
-        thing.setPrice(price);
+        thing.setCategory(category);
         thing.save();
     }
 

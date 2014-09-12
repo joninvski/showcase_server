@@ -11,6 +11,6 @@ create table thing (
   ID                        bigint auto_increment not null,
   name                      varchar(255),
   uri                       varchar(255),
-  price                     integer,
+  category                  varchar(255),
   constraint pk_thing primary key (ID))
 ;

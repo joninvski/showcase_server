@@ -16,7 +16,7 @@ public class Thing extends Model {
 
     public String name;
     public String uri;
-    public int price;
+    public String category;
 
 
     /**
@@ -80,22 +80,22 @@ public class Thing extends Model {
     }
 
     /**
-     * Get price.
+     * Get category.
      *
-     * @return price as int.
+     * @return category as string.
      */
-    public int getPrice()
+    public String getCategory()
     {
-        return price;
+        return category;
     }
 
     /**
-     * Set price.
+     * Set category.
      *
-     * @param price the value to set.
+     * @param category the value to set.
      */
-    public void setPrice(int price)
+    public void setCategory(String category)
     {
-        this.price = price;
+        this.category = category;
     }
 }
