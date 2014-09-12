@@ -4,8 +4,8 @@
 
 # Home page
 GET     /                           controllers.Application.index()
-POST    /v1/ringtone                controllers.Application.addRingtone()
-GET     /v1/ringtones               controllers.Application.getRingtones()
+POST    /v1/things                  controllers.Application.addThing()
+GET     /v1/things                  controllers.Application.getThing()
 
 GET     /v1/events                  controllers.Application.getEvents()
 POST    /v1/event/add               controllers.Application.insertEvent()
