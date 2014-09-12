@@ -1,0 +1,56 @@
+import au.com.coherentsoftware.gradle.database.task.*
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath('au.com.coherentsoftware.gradle:Gradle-DatabasePlugin:1.0.+')
+    }
+}
+
+apply plugin: 'database'
+
+
+database {
+    username = 'trindade_tibber'
+    password = 'tibberpass'
+    driver = 'com.mysql.jdbc.Driver'  // the default value
+    host = 'localhost'  // the default value
+    port = '3306' // the default value
+}
+
+configurations {
+    driver
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    driver 'mysql:mysql-connector-java:5.1.+'
+}
+
+task cleanDB(type: DbReset) {
+    database 'trindade_tibber'
+}
+
+task createDB(type: DbInit) {
+    database  'trindade_tibber'
+    dataFile = 'init_db.sql'
+}
+
+task populateDB(type: DbInit, dependsOn: ':createDB') {
+    database  'trindade_tibber'
+    dataFile = 'populate_db.sql'
+}
+
+
+// Init jdbc so gradle can connect directly to db
+URLClassLoader loader = GroovyObject.class.classLoader as URLClassLoader
+configurations.driver.each { File file ->
+    loader.addURL(file.toURI().toURL())
+}
+Class driver = loader.loadClass(project.database.driver)
