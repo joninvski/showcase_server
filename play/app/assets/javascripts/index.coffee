@@ -1,5 +1,5 @@
 $ ->
- $.get "/v1/ringtones", (data) ->
-    $.each data, (index, ringtone) ->
-        ringText = ringtone.name + " ---> " + ringtone.uri + " ---> " + ringtone.price
-        $("#ringtones").append $("<li>").text ringText
+ $.get "/v1/things", (data) ->
+    $.each data, (index, thing) ->
+        thingText = thing.name + " ---> " + thing.uri + " ---> " + thing.price
+        $("#things").append $("<li>").text thingText

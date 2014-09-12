@@ -35,15 +35,12 @@ public class Application extends Controller {
     }
 
     public static Result getThings() {
-        List<Thing> things = new Model.Finder(String.class, Thing.class).all();
-        if(things.size() == 0) {
-            things= new Model.Finder(String.class, Thing.class).all();
-        }
+        List<Thing> things = new Model.Finder(Long.class, Thing.class).all();
         return ok(Json.toJson(things));
     }
 
     public static Result getEvents() {
-        List<Event> events = new Model.Finder(String.class, Event.class).all();
+        List<Event> events = new Model.Finder(Long.class, Event.class).all();
         return ok(Json.toJson(events));
     }
 

@@ -12,5 +12,5 @@ create table thing (
   name                      varchar(255),
   uri                       varchar(255),
   price                     integer,
-  constraint pk_ringtone primary key (ID))
+  constraint pk_thing primary key (ID))
 ;
