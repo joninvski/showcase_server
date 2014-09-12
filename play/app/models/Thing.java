@@ -17,7 +17,8 @@ public class Thing extends Model {
     public String name;
     public String imageUrl;
     public String category;
-
+    public String text;
+    public String homepage;
 
     /**
      * Get id.
@@ -97,5 +98,45 @@ public class Thing extends Model {
     public void setCategory(String category)
     {
         this.category = category;
+    }
+
+    /**
+     * Get homepage.
+     *
+     * @return homepage as String.
+     */
+    public String getHomepage()
+    {
+        return homepage;
+    }
+
+    /**
+     * Set homepage.
+     *
+     * @param homepage the value to set.
+     */
+    public void setHomepage(String homepage)
+    {
+        this.homepage = homepage;
+    }
+
+    /**
+     * Get text.
+     *
+     * @return text as String.
+     */
+    public String getText()
+    {
+        return text;
+    }
+
+    /**
+     * Set text.
+     *
+     * @param text the value to set.
+     */
+    public void setText(String text)
+    {
+        this.text = text;
     }
 }

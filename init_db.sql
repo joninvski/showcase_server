@@ -12,5 +12,7 @@ create table thing (
   name                      varchar(255),
   image_url                 varchar(255),
   category                  varchar(255),
+  text                      varchar(255),
+  homepage                  varchar(255),
   constraint pk_thing primary key (ID))
 ;
