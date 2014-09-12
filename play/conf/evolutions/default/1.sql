@@ -12,12 +12,12 @@ create table event (
   constraint pk_event primary key (ID))
 ;
 
-create table ringtone (
+create table thing (
   ID                        bigint auto_increment not null,
   name                      varchar(255),
   uri                       varchar(255),
   price                     integer,
-  constraint pk_ringtone primary key (ID))
+  constraint pk_thing primary key (ID))
 ;
 
 
@@ -29,7 +29,7 @@ SET FOREIGN_KEY_CHECKS=0;
 
 drop table event;
 
-drop table ringtone;
+drop table thing;
 
 SET FOREIGN_KEY_CHECKS=1;
 

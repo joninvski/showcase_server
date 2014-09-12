@@ -3,11 +3,17 @@ package models;
 import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Column;
 
 @Entity
 public class Thing extends Model {
     @Id
-    public String id;
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    public long id;
+
     public String name;
     public String uri;
     public int price;
@@ -16,9 +22,9 @@ public class Thing extends Model {
     /**
      * Get id.
      *
-     * @return id as String.
+     * @return id as long.
      */
-    public String getId()
+    public long getId()
     {
         return id;
     }
@@ -28,7 +34,7 @@ public class Thing extends Model {
      *
      * @param id the value to set.
      */
-    public void setId(String id)
+    public void setId(long id)
     {
         this.id = id;
     }
