@@ -15,7 +15,7 @@ public class Thing extends Model {
     public long id;
 
     public String name;
-    public String uri;
+    public String imageUrl;
     public String category;
 
 
@@ -60,23 +60,23 @@ public class Thing extends Model {
     }
 
     /**
-     * Get uri.
+     * Get imageUrl.
      *
-     * @return uri as String.
+     * @return imageUrl as String.
      */
-    public String getUri()
+    public String getImageUrl()
     {
-        return uri;
+        return imageUrl;
     }
 
     /**
-     * Set uri.
+     * Set imageUrl.
      *
-     * @param uri the value to set.
+     * @param imageUrl the value to set.
      */
-    public void setUri(String uri)
+    public void setImageUrl(String imageUrl)
     {
-        this.uri = uri;
+        this.imageUrl = imageUrl;
     }
 
     /**

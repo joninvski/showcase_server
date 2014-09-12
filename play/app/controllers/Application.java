@@ -26,10 +26,10 @@ public class Application extends Controller {
         return redirect(routes.Application.index());
     }
 
-    public static void addThing(String name, String uri, String category) {
+    public static void addThing(String name, String imageUrl, String category) {
         Thing thing =   new Thing();
         thing.setName(name);
-        thing.setUri(uri);
+        thing.setImageUrl(imageUrl);
         thing.setCategory(category);
         thing.save();
     }
