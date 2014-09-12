@@ -37,7 +37,7 @@ task cleanDB(type: DbReset) {
     database 'trindade_tibber'
 }
 
-task createDB(type: DbInit) {
+task createDB(type: DbInit, dependsOn: ':cleanDB') {
     database  'trindade_tibber'
     dataFile = 'init_db.sql'
 }

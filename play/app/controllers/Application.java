@@ -26,7 +26,7 @@ public class Application extends Controller {
         return redirect(routes.Application.index());
     }
 
-    public static void addThingPrivate(String name, String uri, int price) {
+    public static void addThing(String name, String uri, int price) {
         Thing thing =   new Thing();
         thing.setName(name);
         thing.setUri(uri);
@@ -34,16 +34,9 @@ public class Application extends Controller {
         thing.save();
     }
 
-<<<<<<< HEAD
     public static Result getThings() {
         List<Thing> things = new Model.Finder(String.class, Thing.class).all();
         if(things.size() == 0) {
-            addThingPrivate("Sumol", "http://www.hipersuper.pt/wp-content/uploads/2011/11/sumol.jpg", 123);
-            addThingPrivate("Coca-Cola", "http://fandbnews.com/wp-content/uploads/2014/02/Coca-Cola-Logo.jpg", 231);
-            addThingPrivate("A club", "http://gallery.jhwebdesigner.com/wp-content/uploads/2012/08/mount_sinai_soccer_club_logo_300dpi_png_file.jpg", 93);
-            addThingPrivate("Zara", "http://img4.wikia.nocookie.net/__cb20121226055648/logopedia/images/5/53/Zara-LOGO-blackwhite.jpg", 81);
-            addThingPrivate("BCP", "http://4vector.com/thumb_data/afd-33897.jpg", 88);
-            addThingPrivate("CGD", "http://images.all-free-download.com/images/graphiclarge/cgd_2_62577.jpg", 19);
             things= new Model.Finder(String.class, Thing.class).all();
         }
         return ok(Json.toJson(things));

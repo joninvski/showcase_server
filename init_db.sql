@@ -1,14 +1,3 @@
-
-# --- !Downs
-SET FOREIGN_KEY_CHECKS=0;
-
-drop table event;
-
-drop table thing;
-
-SET FOREIGN_KEY_CHECKS=1;
-
-# --- !Ups
 create table event (
   ID                        bigint auto_increment not null,
   duration                  integer,
@@ -25,6 +14,3 @@ create table thing (
   price                     integer,
   constraint pk_ringtone primary key (ID))
 ;
-
-
-
