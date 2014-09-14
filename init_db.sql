@@ -14,5 +14,7 @@ create table thing (
   category                  varchar(255),
   text                      varchar(255),
   homepage                  varchar(255),
+  width                     integer,
+  height                    integer,
   constraint pk_thing primary key (ID))
 ;

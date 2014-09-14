@@ -19,6 +19,8 @@ public class Thing extends Model {
     public String category;
     public String text;
     public String homepage;
+    public int width;
+    public int height;
 
     /**
      * Get id.
@@ -138,5 +140,45 @@ public class Thing extends Model {
     public void setText(String text)
     {
         this.text = text;
+    }
+
+    /**
+     * Get width.
+     *
+     * @return width as int.
+     */
+    public int getWidth()
+    {
+        return width;
+    }
+
+    /**
+     * Set width.
+     *
+     * @param width the value to set.
+     */
+    public void setWidth(int width)
+    {
+        this.width = width;
+    }
+
+    /**
+     * Get height.
+     *
+     * @return height as int.
+     */
+    public int getHeight()
+    {
+        return height;
+    }
+
+    /**
+     * Set height.
+     *
+     * @param height the value to set.
+     */
+    public void setHeight(int height)
+    {
+        this.height = height;
     }
 }
