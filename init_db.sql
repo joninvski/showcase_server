@@ -10,8 +10,10 @@ create table event (
 create table thing (
   ID                        bigint auto_increment not null,
   name                      varchar(255),
-  uri                       varchar(255),
-  price                     integer,
+  image_url                 varchar(255),
+  category                  varchar(255),
+  text                      varchar(255),
+  homepage                  varchar(255),
   width                     integer,
   height                    integer,
   constraint pk_thing primary key (ID))

@@ -15,11 +15,12 @@ public class Thing extends Model {
     public long id;
 
     public String name;
-    public String uri;
-    public int price;
+    public String imageUrl;
+    public String category;
+    public String text;
+    public String homepage;
     public int width;
     public int height;
-
 
     /**
      * Get id.
@@ -62,43 +63,83 @@ public class Thing extends Model {
     }
 
     /**
-     * Get uri.
+     * Get imageUrl.
      *
-     * @return uri as String.
+     * @return imageUrl as String.
      */
-    public String getUri()
+    public String getImageUrl()
     {
-        return uri;
+        return imageUrl;
     }
 
     /**
-     * Set uri.
+     * Set imageUrl.
      *
-     * @param uri the value to set.
+     * @param imageUrl the value to set.
      */
-    public void setUri(String uri)
+    public void setImageUrl(String imageUrl)
     {
-        this.uri = uri;
+        this.imageUrl = imageUrl;
     }
 
     /**
-     * Get price.
+     * Get category.
      *
-     * @return price as int.
+     * @return category as string.
      */
-    public int getPrice()
+    public String getCategory()
     {
-        return price;
+        return category;
     }
 
     /**
-     * Set price.
+     * Set category.
      *
-     * @param price the value to set.
+     * @param category the value to set.
      */
-    public void setPrice(int price)
+    public void setCategory(String category)
     {
-        this.price = price;
+        this.category = category;
+    }
+
+    /**
+     * Get homepage.
+     *
+     * @return homepage as String.
+     */
+    public String getHomepage()
+    {
+        return homepage;
+    }
+
+    /**
+     * Set homepage.
+     *
+     * @param homepage the value to set.
+     */
+    public void setHomepage(String homepage)
+    {
+        this.homepage = homepage;
+    }
+
+    /**
+     * Get text.
+     *
+     * @return text as String.
+     */
+    public String getText()
+    {
+        return text;
+    }
+
+    /**
+     * Set text.
+     *
+     * @param text the value to set.
+     */
+    public void setText(String text)
+    {
+        this.text = text;
     }
 
     /**
