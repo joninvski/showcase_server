@@ -12,5 +12,7 @@ create table thing (
   name                      varchar(255),
   uri                       varchar(255),
   price                     integer,
+  width                     integer,
+  height                    integer,
   constraint pk_thing primary key (ID))
 ;

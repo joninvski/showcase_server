@@ -17,6 +17,8 @@ public class Thing extends Model {
     public String name;
     public String uri;
     public int price;
+    public int width;
+    public int height;
 
 
     /**
@@ -97,5 +99,45 @@ public class Thing extends Model {
     public void setPrice(int price)
     {
         this.price = price;
+    }
+
+    /**
+     * Get width.
+     *
+     * @return width as int.
+     */
+    public int getWidth()
+    {
+        return width;
+    }
+
+    /**
+     * Set width.
+     *
+     * @param width the value to set.
+     */
+    public void setWidth(int width)
+    {
+        this.width = width;
+    }
+
+    /**
+     * Get height.
+     *
+     * @return height as int.
+     */
+    public int getHeight()
+    {
+        return height;
+    }
+
+    /**
+     * Set height.
+     *
+     * @param height the value to set.
+     */
+    public void setHeight(int height)
+    {
+        this.height = height;
     }
 }
