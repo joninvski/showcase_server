@@ -42,6 +42,21 @@ task createDB(type: DbInit, dependsOn: ':cleanDB') {
     dataFile = 'init_db.sql'
 }
 
+task convertCvsToSql(type:Exec) {
+  //on linux
+  args 'convert_cvs2sql.py', '>', 'populate_db.sql'
+  commandLine 'python'
+
+  //store the output instead of printing to the console:
+  standardOutput = new ByteArrayOutputStream()
+
+  //extension method stopTomcat.output() can be used to obtain the output:
+  ext.output = {
+      return standardOutput.toString()
+    }
+}
+
+
 task populateDB(type: DbInit, dependsOn: ':createDB') {
     database  'trindade_tibber'
     dataFile = 'populate_db.sql'
