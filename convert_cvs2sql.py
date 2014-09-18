@@ -17,9 +17,18 @@ def create_sql(f, seq, name, category, text, homepage, url_logo, url_product):
 
     im = Image.open("product.jpg")
     productX, productY = im.size
+    name = name.replace('"','\\"')
+    text = text.replace('"','\\"')
 
-    sql = 'insert into thing VALUES ( %d, "%s", "%s", "%s", "%s", "%s", "%s", %d, %d, %d, %d);\n' \
-            % (seq, name, text, category, homepage, url_logo, url_product, logoX, logoY, productX, productY)
+    sql = 'insert into thing VALUES ( %d, "%s", "%s", "%s", "%s", "%s", "%s", %d, %d, %d, %d);\n'  % (
+            seq,
+            name,
+            text, 
+            category, 
+            homepage, 
+            url_logo,
+            url_product,
+            logoX, logoY, productX, productY)
 
     f.write(sql)
 
@@ -30,7 +39,7 @@ with open('companies.csv', 'rb') as csvfile:
 
     f = open('populate_db.sql', 'w')
     for name, category, text, homepage, url_logo, url_product in reader:
-        create_sql(f, seq, name.strip(), category.strip(), homepage.strip(), text.strip(), url_logo.strip(), url_product.strip())
+        create_sql(f, seq, name.strip(), category.strip(), text.strip(), homepage.strip(),  url_logo.strip(), url_product.strip())
         seq += 1
 
     f.close()

@@ -29,7 +29,7 @@ public class Application extends Controller {
     public static void addThing(String name, String imageUrl, String category) {
         Thing thing =   new Thing();
         thing.setName(name);
-        thing.setImageUrl(imageUrl);
+        thing.setUrlProduct(imageUrl);
         thing.setCategory(category);
         thing.save();
     }
