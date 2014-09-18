@@ -56,12 +56,10 @@ task convertCvsToSql(type:Exec) {
     }
 }
 
-
-task populateDB(type: DbInit, dependsOn: ':createDB') {
+task populateDB(type: DbInit, dependsOn: ':createDB', ':convertCvsToSql') {
     database  'trindade_tibber'
     dataFile = 'populate_db.sql'
 }
-
 
 // Init jdbc so gradle can connect directly to db
 URLClassLoader loader = GroovyObject.class.classLoader as URLClassLoader
